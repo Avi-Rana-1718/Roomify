@@ -64,8 +64,8 @@ const LiveVideoPage = () => {
     useJoin(
         {
             appid: APP_ID,
-            channel: meetingDetails?.room_name,
-            token: meetingDetails?.room_token,
+            channel: meetingDetails?.room_name || channel,
+            token: meetingDetails?.room_token || null,
         },
         activeConnection
     );
